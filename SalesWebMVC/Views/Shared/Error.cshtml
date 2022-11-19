@@ -1,10 +1,10 @@
-﻿@model ErrorViewModel
+﻿@model SalesWebMVC.Models.ViewModels.ErrorViewModel
 @{
     ViewData["Title"] = "Error";
 }
 
-<h1 class="text-danger">Error.</h1>
-<h2 class="text-danger">An error occurred while processing your request.</h2>
+<h1 class="text-danger">@ViewData["Title"]</h1>
+<h2 class="text-danger">@Model.Message</h2>
 
 @if (Model.ShowRequestId)
 {
@@ -23,3 +23,6 @@
     For local debugging, enable the <strong>Development</strong> environment by setting the <strong>ASPNETCORE_ENVIRONMENT</strong> environment variable to <strong>Development</strong>
     and restarting the app.
 </p>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
